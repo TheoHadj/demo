@@ -13,7 +13,7 @@ import com.example.demo.service.LivreService;
 public class DemoApplication implements CommandLineRunner {
 	
 	@Autowired
-	private LivreService ls = new LivreService();
+	private LivreService ls;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
