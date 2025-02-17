@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.model.HelloWorld;
+import com.example.demo.service.HelloWorldService;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
@@ -16,9 +17,9 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("Hello World!!");
-		HelloWorld hw = new HelloWorld("Holà world!!");
-		hw.getHelloWorld();
+		System.out.println("Hello World!!qsdqsd");
+		// HelloWorld hw = new HelloWorld("Holà world!!");
+		// getHelloWorld();
 
 	}
 
