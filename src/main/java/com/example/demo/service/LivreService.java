@@ -10,10 +10,16 @@ import com.example.demo.model.Livre;
 @Component
 public class LivreService {
     private ArrayList<Livre> livres = new ArrayList<>();
+    
     public LivreService() {
+    
     }
+    
+    public LivreService(ArrayList<Livre> livres) {
+        this.livres = livres;
+    }   
 
-    public void addLivre(){
+    public Livre addLivre(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Titre: ");
         String titre = sc.nextLine();
@@ -22,7 +28,7 @@ public class LivreService {
         System.out.println("Date de publication: ");
         String datePub = (sc.nextLine());
         Livre livre = new Livre(titre, desc, datePub);
-
+        return livre;
     }
 
     public Livre getLivre(){
@@ -31,11 +37,16 @@ public class LivreService {
     }
 
     public void addSomeLivres(){
-        livres.add(new Livre("titre1", "description1", "datePublication1"));
-        livres.add(new Livre("titre2", "description2", "datePublication2"));
-        livres.add(new Livre("titre3", "description3", "datePublication3"));
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Combien de livres voulez-vous ajouter?");
+        int j = sc.nextInt();
+        for (int i = 0; i < j; i++) {
+            System.out.println("Livre " + (i+1));
+            livres.add(addLivre());
+        }
+        
         for (Livre livre : livres) {
-            System.out.println(livre.toString());
+            System.out.println(livre);
         }
     }
 
