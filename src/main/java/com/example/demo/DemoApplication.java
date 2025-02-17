@@ -25,6 +25,7 @@ public class DemoApplication implements CommandLineRunner {
         HelloWorld hw = HelloWorldService.getHelloWorld();
 		System.out.println(hw.getValue());
         ls.addLivre();
+		ls.addSomeLivres();
 
 
 	}
