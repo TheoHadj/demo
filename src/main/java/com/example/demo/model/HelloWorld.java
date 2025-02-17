@@ -8,21 +8,9 @@ import com.example.demo.service.HelloWorldService;
 import com.example.demo.service.LivreService;
 
 @Component
-public class HelloWorld implements CommandLineRunner {
+public class HelloWorld {
     private String value;
-    @Autowired
-    private LivreService ls = new LivreService();
-	@Override
-	public void run(String... args) throws Exception {
-        System.out.println("Hello World!!");
-		// HelloWorld hw = new HelloWorld("Holà world!!");
-        HelloWorld hw = HelloWorldService.getHelloWorld();
-		System.out.println(hw.getValue());
-        // LivreService ls = new LivreService();
-        ls.addLivre();
 
-
-	}
     public HelloWorld() {
     }
 
